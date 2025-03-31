@@ -4,6 +4,7 @@ import './index.css'
 import App from './App.jsx'
 import About from './About.jsx'
 import AboutContent from './About_Content.jsx'
+import Projects from './Projects.jsx'
 
 createRoot(document.getElementById('header')).render(
   <StrictMode>
@@ -20,5 +21,11 @@ createRoot(document.getElementById('about')).render(
 createRoot(document.getElementById('about-content')).render(
   <StrictMode>
     <AboutContent />
+  </StrictMode>
+)
+
+createRoot(document.getElementById('projects')).render(
+  <StrictMode>
+    <Projects />
   </StrictMode>
 )

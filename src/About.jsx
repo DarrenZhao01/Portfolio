@@ -5,12 +5,12 @@ import 'aos/dist/aos.css';
 
 function About() {
     useEffect(() => {
-        AOS.init({ duration: 1000, once: true });
+        AOS.init({ duration: 700, easing: "ease-in-out", once: false });
         AOS.refresh();
     }, []);
     return (
         <div className="flex flex-col justify-center h-20" >
-            <p className="text-5xl font-semibold">About Me</p>
+            <p className="text-5xl font-semibold" data-aos="fade-up">About Me</p>
         </div>
     )
 }
