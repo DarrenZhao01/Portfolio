@@ -2,9 +2,9 @@ import React, { useState, useRef, useEffect } from "react";
 
 function Projects() {
   const projects = [
-    { id: 1, name: "Virtual Tutoring SF", content: "Placeholder for Project 1 content." },
-    { id: 2, name: "Project 2", content: "Placeholder for Project 2 content." },
-    { id: 3, name: "Project 3", content: "Placeholder for Project 3 content." },
+    { id: 1, name: "Virtual Tutoring SF", link: "https://www.virtualtutoringsf.org/", content: "For students, by students.", image: "src/assets/Virtual Tutoring SF _ Welcome.jpeg", color: "text-amber-950" },
+    { id: 2, name: "SF Dental Office", link: "https://www.sfdentaloffice.com/", content: "Healthy smiles for years to come.", image: "src/assets/SF_Dental_Office.jpeg", color: "text-purple-950" },
+    { id: 3, name: "ClubInfo", content: "2nd Place Congressional App Winner 2023, San Francisco District", image: "src/assets/Clubinfo.png", color: "text-purple-950" },
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);
@@ -22,15 +22,15 @@ function Projects() {
   }, [activeIndex]);
 
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center mb-7">
       {/* Frosted Glass Selection Bar with Sliding Indicator */}
-      <div className="relative w-full p-4 bg-white/15 backdrop-blur-md rounded-2xl flex justify-around">
+      <div className="relative w-full p-4 bg-white/15 backdrop-blur-md rounded-xl flex justify-around">
         {projects.map((project, index) => (
           <button
             key={project.id}
             ref={(el) => (tabRefs.current[index] = el)}
             onClick={() => setActiveIndex(index)}
-            className={`px-4 py-2 text-xl rounded-lg relative z-10 transition-colors
+            className={`px-4 py-2 text-xl rounded-xl relative z-10 transition-colors
               ${
                 activeIndex === index
                   ? "text-white"
@@ -49,19 +49,21 @@ function Projects() {
 
       {/* Project Placeholder Content */}
       <div className="mt-8 w-full flex justify-center">
-        <div className="relative shadow-md rounded-lg cursor-pointer group">
+        <div className="relative shadow-md rounded-xl cursor-pointer group">
+          <a href={projects[activeIndex].link} target="_blank" rel="noopener noreferrer">
           <img
-            src="src/assets/Virtual Tutoring SF _ Welcome.jpeg"
-            alt="vtsf"
-            className="w-full h-auto object-cover rounded-lg"
+            src={projects[activeIndex].image}
+            alt={projects[activeIndex].name}
+            className="w-full h-auto object-cover rounded-xl"
           />
+          </a>
           <div
-            className="absolute bottom-0 left-0 right-0 h-60 pointer-events-none transition-opacity duration-300 group-hover:opacity-0"
-            style={{ backdropFilter: 'blur(10px)', maskImage: 'linear-gradient(to bottom, transparent, black)' }}
+            className="absolute bottom-0 left-0 right-0 h-full rounded-xl pointer-events-none transition-opacity duration-300 group-hover:opacity-0"
+            style={{ backdropFilter: 'blur(1000px)', maskImage: 'linear-gradient(to bottom, transparent, orange)' }}
           ></div>
-          <div className="absolute bottom-0 left-0 right-0 h-40 p-4 text-white flex flex-col justify-end z-10">
-            <h1 className="text-2xl font-semibold">{projects[activeIndex].name}</h1>
-            <p className="mt-2">{projects[activeIndex].content}</p>
+          <div className={`absolute bottom-0 left-0 right-0 h-40 p-4 ${projects[activeIndex].color} ml-7 flex flex-col justify-end z-10 transition-opacity duration-300 group-hover:opacity-0`}>
+            <h1 className="text-6xl font-bold ">{projects[activeIndex].name}</h1>
+            <p className="mt-4 mb-7 text-2xl">{projects[activeIndex].content}</p>
           </div>
         </div>
       </div>
