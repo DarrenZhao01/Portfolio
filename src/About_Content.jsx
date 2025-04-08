@@ -5,20 +5,27 @@ import "aos/dist/aos.css";
 
 function AboutContent() {
   useEffect(() => {
-    AOS.init({ duration: 700, easing: 'ease-in-out', once: false });
+    AOS.init({ duration: 700, easing: 'ease-in-out', once: true });
     AOS.refresh();
   }, []);
   return (
-    <div className="grid auto-cols-fr grid-flow-col justify-center">
+    <div className="grid auto-cols-fr grid-flow-col justify-center items-center">
       <div>
-        <p className="text-2xl/10" data-aos="fade-up" data-aos-delay="600">
+        <p className="text-5xl/30 font-semibold" data-aos="fade-up">About Me</p>
+        <p className="text-2xl/10" data-aos="fade-up" data-aos-delay="600" style={{ color: '#888484' }}>
           I am passionate about software development and am always looking for opportunities to learn and grow.
-          Currently, I am shaprening my skills in Python and web development, whether it's through personal projects or coursework.
-          Previously, I have built websites for a non-profit tutoring organization and a local San Francisco business.
+          Currently, I am expanding my skills in <span style={{ color: '#FFFFFF' }}>Python</span> and <span style={{ color: '#FFFFFF' }}>Web Development</span>, whether it's through personal projects or coursework.
+          Previously, I have built websites for a <span style={{ color: '#FFFFFF' }}>non-profit tutoring organization</span> and a <span style={{ color: '#FFFFFF' }}>local SF business</span>.
         </p>
       </div>
-      <div>
-        <p className="text-2xl">Image Placeholder</p>
+      <div className="flex justify-end">
+        <img
+          className="max-h-200 rounded-2xl"
+          data-aos="fade-up"
+          data-aos-delay="1200"
+          src="src/assets/me.jpg"
+          alt="About me"
+        />
       </div>
     </div>
   );

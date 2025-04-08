@@ -15,10 +15,11 @@ function App() {
       </h1>
       <h2
         className="text-2xl/10 font-medium"
+        style={{ color: '#888484' }}
         data-aos="fade-up"
         data-aos-delay="600"
       >
-        I'm a student studying Computer Science at the University of California, Irvine.
+        I'm a <span style={{ color: '#FFFFFF' }}>Computer Science student</span> at the University of California, Irvine.
       </h2>
     </div>
   );

@@ -22,19 +22,19 @@ function Projects() {
   }, [activeIndex]);
 
   return (
-    <div className="flex flex-col items-center mt-180">
+    <div className="flex flex-col items-center">
       {/* Frosted Glass Selection Bar with Sliding Indicator */}
-      <div className="relative w-full p-4 bg-white/15 backdrop-blur-md rounded-full shadow-md flex justify-around">
+      <div className="relative w-full p-4 bg-white/15 backdrop-blur-md rounded-2xl flex justify-around">
         {projects.map((project, index) => (
           <button
             key={project.id}
             ref={(el) => (tabRefs.current[index] = el)}
             onClick={() => setActiveIndex(index)}
-            className={`px-4 py-2 font-medium rounded-lg relative z-10 transition-colors
+            className={`px-4 py-2 text-xl rounded-lg relative z-10 transition-colors
               ${
                 activeIndex === index
                   ? "text-white"
-                  : "white hover:bg-purple-900/60"
+                  : "white"
               }`}
           >
             {project.name}
@@ -48,11 +48,22 @@ function Projects() {
       </div>
 
       {/* Project Placeholder Content */}
-      <div className="mt-8 w-full max-w-4xl p-6 bg-gray-600 rounded-lg shadow-lg">
-        <h2 className="text-xl font-semibold mb-4">
-          {projects[activeIndex].name}
-        </h2>
-        <p>{projects[activeIndex].content}</p>
+      <div className="mt-8 w-full flex justify-center">
+        <div className="relative shadow-md rounded-lg cursor-pointer group">
+          <img
+            src="src/assets/Virtual Tutoring SF _ Welcome.jpeg"
+            alt="vtsf"
+            className="w-full h-auto object-cover rounded-lg"
+          />
+          <div
+            className="absolute bottom-0 left-0 right-0 h-60 pointer-events-none transition-opacity duration-300 group-hover:opacity-0"
+            style={{ backdropFilter: 'blur(10px)', maskImage: 'linear-gradient(to bottom, transparent, black)' }}
+          ></div>
+          <div className="absolute bottom-0 left-0 right-0 h-40 p-4 text-white flex flex-col justify-end z-10">
+            <h1 className="text-2xl font-semibold">{projects[activeIndex].name}</h1>
+            <p className="mt-2">{projects[activeIndex].content}</p>
+          </div>
+        </div>
       </div>
     </div>
   );

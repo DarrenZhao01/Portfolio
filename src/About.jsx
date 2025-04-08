@@ -9,8 +9,8 @@ function About() {
         AOS.refresh();
     }, []);
     return (
-        <div className="flex flex-col justify-center h-20" >
-            <p className="text-5xl font-semibold" data-aos="fade-up">About Me</p>
+        <div className="flex flex-col justify-center h-20 text-5xl/30 font-semibold mt-180 mb-5" >
+            Projects
         </div>
     )
 }
