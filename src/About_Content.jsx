@@ -23,7 +23,7 @@ function AboutContent() {
           className="max-h-200 rounded-2xl"
           data-aos="fade-up"
           data-aos-delay="1200"
-          src="src/assets/me.jpg"
+          src="/me.jpg"
           alt="About me"
         />
       </div>
