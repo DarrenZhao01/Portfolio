@@ -15,7 +15,7 @@ function AboutContent() {
         <p className="text-2xl/10" data-aos="fade-up" data-aos-delay="600" style={{ color: '#888484' }}>
           I am passionate about software development and am always looking for opportunities to learn and grow.
           Currently, I am expanding my skills in <span style={{ color: '#FFFFFF' }}>Python</span> and <span style={{ color: '#FFFFFF' }}>Web Development</span>, whether it's through personal projects or coursework.
-          Previously, I have built websites for a <span style={{ color: '#FFFFFF' }}>non-profit tutoring organization</span> and a <span style={{ color: '#FFFFFF' }}>local SF business</span>.
+          <span style={{ color: '#FFFFFF' }}> My most recent project was building Course Finder UCI</span>, a DegreeWorks-based course planner for UCI students. Previously, I have built websites for a <span style={{ color: '#FFFFFF' }}>non-profit tutoring organization</span> and a <span style={{ color: '#FFFFFF' }}>local SF business</span>.
         </p>
       </div>
       <div className="flex justify-end pl-10">

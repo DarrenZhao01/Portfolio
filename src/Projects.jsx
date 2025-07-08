@@ -4,7 +4,8 @@ function Projects() {
   const projects = [
     { id: 1, name: "Virtual Tutoring SF", link: "https://www.virtualtutoringsf.org/", content: "For students, by students.", image: "/Virtual Tutoring SF _ Welcome.jpeg", color: "text-amber-950" },
     { id: 2, name: "SF Dental Office", link: "https://www.sfdentaloffice.com/", content: "Healthy smiles for years to come.", image: "/SF_Dental_Office.jpeg", color: "text-purple-950" },
-    { id: 3, name: "ClubInfo", content: "2nd Place Congressional App Winner 2023, San Francisco District", image: "/Clubinfo.png", color: "text-purple-950" },
+    { id: 3, name: "Course Finder UCI", link: "https://www.coursefinderuci.com/", content: "Discover and explore UCI courses with ease.", image: "/coursefinder-uci.jpg", color: "text-blue-950" },
+    { id: 4, name: "ClubInfo", content: "2nd Place Congressional App Winner 2023, San Francisco District", image: "/Clubinfo.png", color: "text-purple-950" },
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);
@@ -67,6 +68,7 @@ function Projects() {
           </div>
         </div>
       </div>
+      <span>Built with React, Tailwind CSS, and Vite</span>
     </div>
   );
 }
