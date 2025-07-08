@@ -68,6 +68,7 @@ function Projects() {
           </div>
         </div>
       </div>
+      <br></br>
       <span>Built with React, Tailwind CSS, and Vite</span>
     </div>
   );
