@@ -3,7 +3,7 @@ import "./App.css";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-function About() {
+function ProjectHeader() {
     useEffect(() => {
         AOS.init({ duration: 700, easing: "ease-in-out", once: false });
         AOS.refresh();
@@ -15,4 +15,4 @@ function About() {
     )
 }
 
-export default About;
+export default ProjectHeader;

@@ -2,10 +2,17 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
-import About from './About.jsx'
+import Header from './Header.jsx'
+import ProjectHeader from './Project_Header.jsx'
 import AboutContent from './About_Content.jsx'
 import Projects from './Projects.jsx'
 import Connect from './Connect.jsx'
+
+createRoot(document.getElementById('navigation')).render(
+  <StrictMode>
+    <Header />
+  </StrictMode>
+)
 
 createRoot(document.getElementById('header')).render(
   <StrictMode>
@@ -13,9 +20,9 @@ createRoot(document.getElementById('header')).render(
   </StrictMode>
 )
 
-createRoot(document.getElementById('about')).render(
+createRoot(document.getElementById('project-header')).render(
   <StrictMode>
-    <About />
+    <ProjectHeader />
   </StrictMode>
 )
 
