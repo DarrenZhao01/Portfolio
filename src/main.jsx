@@ -5,6 +5,7 @@ import App from './App.jsx'
 import Header from './Header.jsx'
 import ProjectHeader from './Project_Header.jsx'
 import AboutContent from './About_Content.jsx'
+import Timeline from './Timeline.jsx'
 import Projects from './Projects.jsx'
 import Connect from './Connect.jsx'
 
@@ -29,6 +30,12 @@ createRoot(document.getElementById('project-header')).render(
 createRoot(document.getElementById('about-content')).render(
   <StrictMode>
     <AboutContent />
+  </StrictMode>
+)
+
+createRoot(document.getElementById('timeline')).render(
+  <StrictMode>
+    <Timeline />
   </StrictMode>
 )
 

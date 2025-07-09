@@ -328,8 +328,9 @@ body.nav-active .nav__list-item:nth-child(4) {
 /* #Section spacing for fixed header
 ================================================== */
 
-#header,
+/* Dont include header in this */
 #about-content,
+#timeline,
 #project-header,
 #projects,
 #connect {
