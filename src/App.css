@@ -41,8 +41,8 @@
 	height: 36px;
 	width: 36px;
 	z-index:99998;
-	-webkit-transition:all 0.3s ease-out;
-	transition:all 0.3s ease-out
+	-webkit-transition: transform 0.3s ease-out, background 0.3s ease-out, box-shadow 0.3s ease-out;
+	transition: transform 0.3s ease-out, background 0.3s ease-out, box-shadow 0.3s ease-out;
 }
 .cursor2.hover,
 .cursor3.hover{

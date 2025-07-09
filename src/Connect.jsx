@@ -70,7 +70,7 @@ function Connect() {
             </div>
             
             <div className="mt-16 text-sm" style={{ color: '#888484' }} >
-                Built with React, TailwindCSS, and HTML
+                Built with React, TailwindCSS, HTML, and Vite
             </div>
         </div>
     );

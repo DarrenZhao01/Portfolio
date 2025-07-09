@@ -21,11 +21,11 @@ createRoot(document.getElementById('header')).render(
   </StrictMode>
 )
 
-createRoot(document.getElementById('project-header')).render(
-  <StrictMode>
-    <ProjectHeader />
-  </StrictMode>
-)
+// createRoot(document.getElementById('project-header')).render(
+//   <StrictMode>
+//     <ProjectHeader />
+//   </StrictMode>
+// )
 
 createRoot(document.getElementById('about-content')).render(
   <StrictMode>
