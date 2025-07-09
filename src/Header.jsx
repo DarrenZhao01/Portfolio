@@ -42,11 +42,11 @@ function Header() {
     <>
       <header className="cd-header">
         <div className="header-wrapper">
-          <div className="logo-wrap">
+          {/* <div className="logo-wrap">
             <a href="#" className="hover-target" onClick={() => scrollToSection('header')}>
               <span>Darren's</span> Portfolio
             </a>
-          </div>
+          </div> */}
           <div className="nav-but-wrap">
             <div className="menu-icon hover-target" onClick={toggleNav}>
               <span className="menu-icon__line menu-icon__line-left"></span>

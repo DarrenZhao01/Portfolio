@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import "./App.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import SkillsRadar from "./SkillsRadar.jsx";
 
 function App() {
   useEffect(() => {
@@ -10,11 +11,16 @@ function App() {
 
   return (
     <div className="flex flex-col justify-center h-svh">
-      <h1 className="text-7xl/30 font-bold" data-aos="fade-down">
-        Hi, I'm Darren.
-      </h1>
+      <div className="flex items-center justify-center gap-12 mb-4">
+        <h1 className="text-7xl/30 font-bold" data-aos="fade-down">
+          Hi, I'm Darren.
+        </h1>
+        <div data-aos="fade-left" data-aos-delay="400">
+          <SkillsRadar />
+        </div>
+      </div>
       <h2
-        className="text-2xl/10 font-medium"
+        className="text-2xl/10 font-medium text-center"
         style={{ color: '#888484' }}
         data-aos="fade-up"
         data-aos-delay="600"
